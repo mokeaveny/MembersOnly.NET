@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MembersOnly.Data;
 using MembersOnly.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MembersOnly.Controllers
 {
+    [Authorize]
     public class PostsController : Controller
     {
         private readonly PostContext _context;
